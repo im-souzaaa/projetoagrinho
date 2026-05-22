@@ -3,118 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte, Futuro Sustentável</title>
+    <title>Agro Forte - Futuro Sustentável</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header class="main-header">
-        <div class="header-container">
-            <h1 class="logo">Agro<span>Sustentável</span></h1>
-            <nav class="nav-menu">
-                <a href="#sobre">Sobre</a>
-                <a href="#pilares">Pilares</a>
-                <a href="#folders">Práticas Interativas</a>
-                <a href="#contato">Contato</a>
-            </nav>
-            <button id="theme-toggle" class="btn-theme" aria-label="Alternar modo escuro">🌙 Modo Escuro</button>
-        </div>
+    <!-- Cabeçalho com título e botão modo escuro -->
+    <header>
+        <h1>Agro Forte: Futuro Sustentável</h1>
+        <button id="darkModeBtn">Modo Escuro</button>
     </header>
 
+    <!-- Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#intro">Início</a></li>
+            <li><a href="#folders">Informações</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
     <main>
-        <section id="sobre" class="hero-section">
-            <div class="hero-content">
-                <h2>Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</h2>
-                <p>A Agronomia de Baixo Carbono é a chave para alimentar o mundo enquanto protegemos o nosso planeta. Conheça as práticas que transformam a produção agrícola em uma aliada do clima.</p>
-                <button id="btn-boas-vindas" class="btn-primary">Saiba Mais</button>
-                <p id="mensagem-dinamica" class="hidden"></p>
-            </div>
+        <!-- Seções informativas iniciais -->
+        <section id="intro">
+            <h2>Agronomia de Baixo Carbono</h2>
+            <p>A Agronomia de Baixo Carbono promove práticas agrícolas sustentáveis que equilibram produção e preservação ambiental.</p>
+            <img src="https://via.placeholder.com/600x300?text=Agricultura+Sustentavel" alt="Agricultura Sustentável">
         </section>
 
-        <section id="conceito" class="info-section">
-            <div class="section-container">
-                <h3>O que é o Agro de Baixo Carbono?</h3>
-                <p>Trata-se de um conjunto de processos tecnológicos evolutivos que visam a diminuição da emissão de gases de efeito estufa (GEE) no campo, otimizando o uso da terra e aumentando a resiliência das culturas face às mudanças climáticas.</p>
-            </div>
+        <section>
+            <h2>Impactos Ambientais</h2>
+            <p>O manejo correto do solo, uso racional de água e técnicas de plantio direto reduzem significativamente a emissão de gases de efeito estufa.</p>
+            <img src="https://via.placeholder.com/600x300?text=Impacto+Ambiental" alt="Impacto Ambiental">
         </section>
 
-        <section id="pilares" class="pilares-section">
-            <div class="section-container">
-                <h3>Os 3 Pilares da Sustentabilidade</h3>
-                <div class="grid-pilares">
-                    <div class="card-pilar">
-                        <h4>Produtividade</h4>
-                        <p>Garantir a segurança alimentar global através de tecnologias eficientes.</p>
-                    </div>
-                    <div class="card-pilar">
-                        <h4>Conservação</h4>
-                        <p>Preservar recursos hídricos, solo vivo e biodiversidade local.</p>
-                    </div>
-                    <div class="card-pilar">
-                        <h4>Mitigação</h4>
-                        <p>Reduzir ativamente o carbono e fixar nutrientes no solo.</p>
-                    </div>
+        <section>
+            <h2>Inovações Tecnológicas</h2>
+            <p>Equipamentos modernos, monitoramento digital e drones auxiliam na produção eficiente, mantendo a sustentabilidade.</p>
+            <img src="https://via.placeholder.com/600x300?text=Inovacao+Agricola" alt="Inovação Agrícola">
+        </section>
+
+        <!-- Folders interativos -->
+        <section id="folders">
+            <h2>Explore Nossas Práticas</h2>
+
+            <div class="folder">
+                <button class="folder-btn">Plantio Direto</button>
+                <div class="folder-content">
+                    <p>O plantio direto mantém a cobertura do solo, reduz erosão e melhora a fertilidade natural.</p>
+                </div>
+            </div>
+
+            <div class="folder">
+                <button class="folder-btn">Rotação de Culturas</button>
+                <div class="folder-content">
+                    <p>A rotação de culturas diminui a incidência de pragas e melhora a saúde do solo.</p>
+                </div>
+            </div>
+
+            <div class="folder">
+                <button class="folder-btn">Uso Sustentável de Água</button>
+                <div class="folder-content">
+                    <p>Irrigação eficiente e captação de água da chuva reduzem desperdício e preservam recursos hídricos.</p>
                 </div>
             </div>
         </section>
 
-        <section id="folders" class="folders-section">
-            <div class="section-container">
-                <h3>Conheça as Práticas (Clique nos Folders)</h3>
-                <p class="instrucao">Clique em cada cartão para abrir os detalhes de cada técnica inovadora.</p>
-                
-                <div class="folders-wrapper">
-                    <div class="folder" data-target="info-plantio">
-                        <div class="folder-header">
-                            <h4>🌱 Plantio Direto</h4>
-                        </div>
-                        <div id="info-plantio" class="folder-content hidden">
-                            <p>O cultivo é feito sem o revolvimento do solo. A palhada protege a terra, retém umidade e fixa o carbono orgânico de forma muito mais eficaz.</p>
-                        </div>
-                    </div>
+        <!-- Formulário de contato com validação simples -->
+        <section id="contact">
+            <h2>Contato</h2>
+            <form id="contactForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
 
-                    <div class="folder" data-target="info-ilpf">
-                        <div class="folder-header">
-                            <h4>🌳 ILPF</h4>
-                        </div>
-                        <div id="info-ilpf" class="folder-content hidden">
-                            <p>A Integração Lavoura-Pecuária-Floresta combina diferentes sistemas produtivos na mesma área, otimizando o espaço e gerando créditos de carbono.</p>
-                        </div>
-                    </div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-                    <div class="folder" data-target="info-bio">
-                        <div class="folder-header">
-                            <h4>🦠 Bioinsumos</h4>
-                        </div>
-                        <div id="info-bio" class="folder-content hidden">
-                            <p>Utilização de microrganismos e defensores naturais que substituem os químicos tradicionais, reduzindo a pegada ecológica da produção.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
 
-        <section id="contato" class="contact-section">
-            <div class="form-container">
-                <h3>Receba nosso boletim informativo</h3>
-                <form id="newsletter-form">
-                    <div class="input-group">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" placeholder="Digite seu nome">
-                    </div>
-                    <div class="input-group">
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="email" placeholder="Seu melhor e-mail">
-                    </div>
-                    <button type="submit" class="btn-submit">Inscrever-se</button>
-                </form>
-                <p id="form-feedback" class="feedback-msg"></p>
-            </div>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="formMessage"></p>
         </section>
     </main>
 
-    <footer class="main-footer">
-        <p>&copy; 2026 AgroSustentável. Todos os direitos reservados. Equilíbrio entre produção e meio ambiente.</p>
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Agro Forte. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>

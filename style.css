@@ -1,28 +1,4 @@
-/* ==========================================================================
-   Configurações Globais e Variáveis de Cores
-   ========================================================================== */
-:root {
-    --bg-primary: #f4f7f5;
-    --bg-card: #ffffff;
-    --text-color: #2c3e50;
-    --primary-color: #27ae60;
-    --secondary-color: #2ecc71;
-    --accent-color: #e67e22;
-    --header-bg: #1e3d2f;
-    --header-text: #ffffff;
-    --transition-smooth: all 0.3s ease;
-}
-
-/* Variáveis para o Modo Escuro */
-[data-theme="dark"] {
-    --bg-primary: #121212;
-    --bg-card: #1e1e1e;
-    --text-color: #e0e0e0;
-    --primary-color: #2ecc71;
-    --header-bg: #0d1f16;
-    --header-text: #e0e0e0;
-}
-
+/* Reset básico e estilos globais */
 * {
     margin: 0;
     padding: 0;
@@ -30,301 +6,157 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-primary);
-    color: var(--text-color);
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    transition: var(--transition-smooth);
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.5s, color 0.5s;
 }
 
-.section-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-/* Classes utilitárias auxiliares */
-.hidden {
-    display: none;
-}
-
-/* ==========================================================================
-   Header & Navegação (Flexbox)
-   ========================================================================== */
-.main-header {
-    background-color: var(--header-bg);
-    color: var(--header-text);
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.header-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.logo span {
-    color: var(--secondary-color);
+header h1 {
+    font-size: 1.5rem;
 }
 
-.nav-menu a {
-    color: var(--header-text);
+nav {
+    background-color: #2E7D32;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: 600;
-    transition: var(--transition-smooth);
-}
-
-.nav-menu a:hover {
-    color: var(--secondary-color);
-}
-
-.btn-theme {
-    background: transparent;
-    border: 2px solid var(--secondary-color);
-    color: var(--header-text);
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 20px;
     font-weight: bold;
-    transition: var(--transition-smooth);
 }
 
-.btn-theme:hover {
-    background-color: var(--secondary-color);
-    color: #fff;
+main {
+    padding: 2rem;
 }
 
-/* ==========================================================================
-   Seções Informativas
-   ========================================================================== */
-/* Hero Section */
-.hero-section {
-    background: linear-gradient(rgba(30, 61, 47, 0.8), rgba(30, 61, 47, 0.8)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
+section {
+    margin-bottom: 2rem;
 }
 
-.hero-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 30px auto;
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: var(--transition-smooth);
-}
-
-.btn-primary:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-}
-
-#mensagem-dinamica {
-    margin-top: 20px;
-    font-weight: bold;
-    background: rgba(255,255,255,0.2);
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-/* Info Section */
-.info-section {
-    background-color: var(--bg-card);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-/* Pilares Grid (Flexbox) */
-.grid-pilares {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.card-pilar {
-    background-color: var(--bg-card);
-    padding: 30px;
+section img {
+    max-width: 100%;
+    margin-top: 1rem;
     border-radius: 8px;
-    flex: 1;
-    min-width: 250px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-top: 5px solid var(--primary-color);
 }
 
-/* ==========================================================================
-   Folders Interativos
-   ========================================================================== */
-.folders-section {
-    background-color: var(--bg-primary);
+h2 {
+    color: #2E7D32;
 }
 
-.instrucao {
-    font-style: italic;
-    margin-bottom: 25px;
-    color: var(--accent-color);
-}
-
-.folders-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
+/* Folders interativos */
 .folder {
-    background-color: var(--bg-card);
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+}
+
+.folder-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #A5D6A7;
+    border: none;
     cursor: pointer;
-    overflow: hidden;
-    transition: var(--transition-smooth);
-    border-left: 5px solid var(--primary-color);
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-.folder:hover {
-    transform: scale(1.01);
-}
-
-.folder-header {
-    padding: 20px;
-    background-color: rgba(39, 174, 96, 0.05);
+.folder-btn:hover {
+    background-color: #81C784;
 }
 
 .folder-content {
-    padding: 20px;
-    border-top: 1px solid rgba(0,0,0,0.05);
-    animation: fadeIn 0.4s ease;
+    display: none;
+    padding: 1rem;
+    background-color: #E8F5E9;
+    border-top: 1px solid #4CAF50;
 }
 
-/* Animação para abertura do folder */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* ==========================================================================
-   Formulário de Validação e Feedback
-   ========================================================================== */
-.contact-section {
-    background-color: var(--bg-card);
-    padding: 50px 20px;
-}
-
-.form-container {
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     max-width: 500px;
-    margin: 0 auto;
-    padding: 35px;
-    background-color: var(--bg-primary);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.input-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 10px;
+input, textarea {
+    padding: 0.5rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: var(--bg-card);
-    color: var(--text-color);
+    border-radius: 5px;
 }
 
-.btn-submit {
-    width: 100%;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 12px;
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.7rem;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: var(--transition-smooth);
+    transition: background-color 0.3s;
 }
 
-.btn-submit:hover {
-    background-color: var(--secondary-color);
+button[type="submit"]:hover {
+    background-color: #388E3C;
 }
 
-.feedback-msg {
-    margin-top: 15px;
-    font-weight: bold;
+/* Rodapé */
+footer {
+    background-color: #2E7D32;
+    color: white;
     text-align: center;
+    padding: 1rem;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-.main-footer {
-    background-color: var(--header-bg);
-    color: var(--header-text);
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
+/* Modo escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
 }
 
-/* ==========================================================================
-   Media Queries (Responsividade para Tablet e Celular)
-   ========================================================================== */
+body.dark-mode header {
+    background-color: #1B5E20;
+}
+
+body.dark-mode nav {
+    background-color: #33691E;
+}
+
+body.dark-mode .folder-btn {
+    background-color: #558B2F;
+    color: white;
+}
+
+body.dark-mode .folder-btn:hover {
+    background-color: #689F38;
+}
+
+body.dark-mode .folder-content {
+    background-color: #33691E;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-menu {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    .nav-menu a {
-        margin: 0 10px;
-        font-size: 0.95rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.8rem;
-    }
-
-    .grid-pilares {
+    nav ul {
         flex-direction: column;
     }
 }
