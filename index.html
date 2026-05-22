@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="logo">Agro<span>Sustentável</span></h1>
+            <nav class="nav-menu">
+                <a href="#sobre">Sobre</a>
+                <a href="#pilares">Pilares</a>
+                <a href="#folders">Práticas Interativas</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <button id="theme-toggle" class="btn-theme" aria-label="Alternar modo escuro">🌙 Modo Escuro</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="hero-section">
+            <div class="hero-content">
+                <h2>Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</h2>
+                <p>A Agronomia de Baixo Carbono é a chave para alimentar o mundo enquanto protegemos o nosso planeta. Conheça as práticas que transformam a produção agrícola em uma aliada do clima.</p>
+                <button id="btn-boas-vindas" class="btn-primary">Saiba Mais</button>
+                <p id="mensagem-dinamica" class="hidden"></p>
+            </div>
+        </section>
+
+        <section id="conceito" class="info-section">
+            <div class="section-container">
+                <h3>O que é o Agro de Baixo Carbono?</h3>
+                <p>Trata-se de um conjunto de processos tecnológicos evolutivos que visam a diminuição da emissão de gases de efeito estufa (GEE) no campo, otimizando o uso da terra e aumentando a resiliência das culturas face às mudanças climáticas.</p>
+            </div>
+        </section>
+
+        <section id="pilares" class="pilares-section">
+            <div class="section-container">
+                <h3>Os 3 Pilares da Sustentabilidade</h3>
+                <div class="grid-pilares">
+                    <div class="card-pilar">
+                        <h4>Produtividade</h4>
+                        <p>Garantir a segurança alimentar global através de tecnologias eficientes.</p>
+                    </div>
+                    <div class="card-pilar">
+                        <h4>Conservação</h4>
+                        <p>Preservar recursos hídricos, solo vivo e biodiversidade local.</p>
+                    </div>
+                    <div class="card-pilar">
+                        <h4>Mitigação</h4>
+                        <p>Reduzir ativamente o carbono e fixar nutrientes no solo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="folders" class="folders-section">
+            <div class="section-container">
+                <h3>Conheça as Práticas (Clique nos Folders)</h3>
+                <p class="instrucao">Clique em cada cartão para abrir os detalhes de cada técnica inovadora.</p>
+                
+                <div class="folders-wrapper">
+                    <div class="folder" data-target="info-plantio">
+                        <div class="folder-header">
+                            <h4>🌱 Plantio Direto</h4>
+                        </div>
+                        <div id="info-plantio" class="folder-content hidden">
+                            <p>O cultivo é feito sem o revolvimento do solo. A palhada protege a terra, retém umidade e fixa o carbono orgânico de forma muito mais eficaz.</p>
+                        </div>
+                    </div>
+
+                    <div class="folder" data-target="info-ilpf">
+                        <div class="folder-header">
+                            <h4>🌳 ILPF</h4>
+                        </div>
+                        <div id="info-ilpf" class="folder-content hidden">
+                            <p>A Integração Lavoura-Pecuária-Floresta combina diferentes sistemas produtivos na mesma área, otimizando o espaço e gerando créditos de carbono.</p>
+                        </div>
+                    </div>
+
+                    <div class="folder" data-target="info-bio">
+                        <div class="folder-header">
+                            <h4>🦠 Bioinsumos</h4>
+                        </div>
+                        <div id="info-bio" class="folder-content hidden">
+                            <p>Utilização de microrganismos e defensores naturais que substituem os químicos tradicionais, reduzindo a pegada ecológica da produção.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <div class="form-container">
+                <h3>Receba nosso boletim informativo</h3>
+                <form id="newsletter-form">
+                    <div class="input-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" placeholder="Seu melhor e-mail">
+                    </div>
+                    <button type="submit" class="btn-submit">Inscrever-se</button>
+                </form>
+                <p id="form-feedback" class="feedback-msg"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 AgroSustentável. Todos os direitos reservados. Equilíbrio entre produção e meio ambiente.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
