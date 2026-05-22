@@ -3,96 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte - Futuro Sustentável</title>
+    <title>Agro Forte, Futuro Sustentável</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Cabeçalho com título e botão modo escuro -->
     <header>
-        <h1>Agro Forte: Futuro Sustentável</h1>
-        <button id="darkModeBtn">Modo Escuro</button>
+        <div class="header-container">
+            <h1>Agro de Baixo Carbono</h1>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Início</a></li>
+                    <li><a href="#praticas">Práticas</a></li>
+                    <li><a href="#folders">Tecnologias</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <button id="btn-dark-mode">Modo Escuro</button>
+        </div>
     </header>
 
-    <!-- Navegação -->
-    <nav>
-        <ul>
-            <li><a href="#intro">Início</a></li>
-            <li><a href="#folders">Informações</a></li>
-            <li><a href="#contact">Contato</a></li>
-        </ul>
-    </nav>
-
-    <!-- Conteúdo principal -->
     <main>
-        <!-- Seções informativas iniciais -->
-        <section id="intro">
-            <h2>Agronomia de Baixo Carbono</h2>
-            <p>A Agronomia de Baixo Carbono promove práticas agrícolas sustentáveis que equilibram produção e preservação ambiental.</p>
-            <img src="https://via.placeholder.com/600x300?text=Agricultura+Sustentavel" alt="Agricultura Sustentável">
+        <section id="intro" class="info-section">
+            <div class="content">
+                <h2>O que é a Agronomia de Baixo Carbono?</h2>
+                <p>O conceito de Agro de Baixo Carbono busca alinhar a alta produtividade agrícola com a preservação ambiental. Trata-se de um conjunto de práticas que reduzem a emissão de gases de efeito estufa e aumentam a fixação de carbono no solo.</p>
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Plantação verde ao pôr do sol" class="responsive-img">
+            </div>
         </section>
 
-        <section>
-            <h2>Impactos Ambientais</h2>
-            <p>O manejo correto do solo, uso racional de água e técnicas de plantio direto reduzem significativamente a emissão de gases de efeito estufa.</p>
-            <img src="https://via.placeholder.com/600x300?text=Impacto+Ambiental" alt="Impacto Ambiental">
+        <section id="praticas" class="info-section alternate">
+            <div class="content">
+                <h2>Principais Práticas Sustentáveis</h2>
+                <p>Práticas como o Plantio Direto e a Integração Lavoura-Pecuária-Floresta (ILPF) são pilares fundamentais. Elas evitam a erosão do solo, melhoram a retenção de água e promovem a biodiversidade sem a necessidade de abrir novas áreas de desmatamento.</p>
+            </div>
         </section>
 
-        <section>
-            <h2>Inovações Tecnológicas</h2>
-            <p>Equipamentos modernos, monitoramento digital e drones auxiliam na produção eficiente, mantendo a sustentabilidade.</p>
-            <img src="https://via.placeholder.com/600x300?text=Inovacao+Agricola" alt="Inovação Agrícola">
+        <section id="beneficios" class="info-section">
+            <div class="content">
+                <h2>Equilíbrio e Rentabilidade</h2>
+                <p>Preservar o meio ambiente não é inimigo do lucro. A adoção de técnicas sustentáveis diminui o uso de insumos químicos, recupera pastagens degradadas e agrega valor ao produto final no mercado internacional, que exige cada vez mais responsabilidade ambiental.</p>
+            </div>
         </section>
 
-        <!-- Folders interativos -->
         <section id="folders">
-            <h2>Explore Nossas Práticas</h2>
-
-            <div class="folder">
-                <button class="folder-btn">Plantio Direto</button>
-                <div class="folder-content">
-                    <p>O plantio direto mantém a cobertura do solo, reduz erosão e melhora a fertilidade natural.</p>
+            <h2>Explore Nossas Tecnologias</h2>
+            <p class="subtitle">Clique nos folders abaixo para expandir e ler mais informações.</p>
+            
+            <div class="folders-container">
+                <div class="folder">
+                    <button class="folder-header">Bioinsumos <span>+</span></button>
+                    <div class="folder-content">
+                        <p>Substituição de fertilizantes químicos por produtos de base biológica, melhorando a saúde do microbioma do solo e reduzindo a pegada de carbono.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="folder">
-                <button class="folder-btn">Rotação de Culturas</button>
-                <div class="folder-content">
-                    <p>A rotação de culturas diminui a incidência de pragas e melhora a saúde do solo.</p>
+                <div class="folder">
+                    <button class="folder-header">Agricultura de Precisão <span>+</span></button>
+                    <div class="folder-content">
+                        <p>Uso de GPS, drones e sensores para aplicar água e nutrientes apenas onde, quando e na quantidade que a planta realmente precisa, evitando desperdícios.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="folder">
-                <button class="folder-btn">Uso Sustentável de Água</button>
-                <div class="folder-content">
-                    <p>Irrigação eficiente e captação de água da chuva reduzem desperdício e preservam recursos hídricos.</p>
+                <div class="folder">
+                    <button class="folder-header">Energia Solar no Campo <span>+</span></button>
+                    <div class="folder-content">
+                        <p>Instalação de painéis solares para alimentar sistemas de irrigação e maquinários, substituindo geradores movidos a diesel.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Formulário de contato com validação simples -->
-        <section id="contact">
-            <h2>Contato</h2>
-            <form id="contactForm">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Mensagem:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Enviar</button>
+        <section id="contato" class="info-section alternate">
+            <h2>Junte-se à Revolução Verde</h2>
+            <p>Deixe seu e-mail para receber nossa cartilha sobre agro sustentável.</p>
+            
+            <form id="form-contato">
+                <div class="input-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="input-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="Digite seu e-mail">
+                </div>
+                <button type="submit" id="btn-enviar">Assinar Newsletter</button>
             </form>
-            <p id="formMessage"></p>
+            <div id="mensagem-dinamica"></div>
         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2026 Agro Forte. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Agro Forte, Futuro Sustentável. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
